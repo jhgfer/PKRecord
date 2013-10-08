@@ -11,4 +11,9 @@ PS:因为MagicalRecord无法满足轻松创建两DB的需求，怒搞了一份�
 thanks [@magicalpanda](https://github.com/magicalpanda/) ~
 
 ---
-TODO:抄袭iCloud相关逻辑
+#####TODO :
+
+1.DataImport
+
+2.添加iCloud相关逻辑
+
