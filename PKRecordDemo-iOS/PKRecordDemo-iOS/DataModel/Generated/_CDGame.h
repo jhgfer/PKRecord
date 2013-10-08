@@ -1,32 +1,32 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Game.h instead.
+// Make changes to CDGame.h instead.
 
 #import <CoreData/CoreData.h>
 
 
-extern const struct GameAttributes {
+extern const struct CDGameAttributes {
 	__unsafe_unretained NSString *gid;
 	__unsafe_unretained NSString *title;
-} GameAttributes;
+} CDGameAttributes;
 
-extern const struct GameRelationships {
-} GameRelationships;
+extern const struct CDGameRelationships {
+} CDGameRelationships;
 
-extern const struct GameFetchedProperties {
-} GameFetchedProperties;
-
-
+extern const struct CDGameFetchedProperties {
+} CDGameFetchedProperties;
 
 
 
-@interface GameID : NSManagedObjectID {}
+
+
+@interface CDGameID : NSManagedObjectID {}
 @end
 
-@interface _Game : NSManagedObject {}
+@interface _CDGame : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-- (GameID*)objectID;
+- (CDGameID*)objectID;
 
 
 
@@ -59,11 +59,11 @@ extern const struct GameFetchedProperties {
 
 @end
 
-@interface _Game (CoreDataGeneratedAccessors)
+@interface _CDGame (CoreDataGeneratedAccessors)
 
 @end
 
-@interface _Game (CoreDataGeneratedPrimitiveAccessors)
+@interface _CDGame (CoreDataGeneratedPrimitiveAccessors)
 
 
 - (NSNumber*)primitiveGid;

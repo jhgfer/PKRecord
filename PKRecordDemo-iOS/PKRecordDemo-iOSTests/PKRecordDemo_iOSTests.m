@@ -2,7 +2,7 @@
 //  PKRecordDemo_iOSTests.m
 //  PKRecordDemo-iOSTests
 //
-//  Created by zhongsheng on 13-10-8.
+//  Created by passerbycrk on 13-10-8.
 //  Copyright (c) 2013年 passerbycrk. All rights reserved.
 //
 

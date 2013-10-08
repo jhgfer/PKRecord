@@ -1,14 +1,14 @@
-#import "Animation.h"
+#import "CDComics.h"
 
 
-@interface Animation ()
+@interface CDComics ()
 
 // Private interface goes here.
 
 @end
 
 
-@implementation Animation
+@implementation CDComics
 
 // Custom logic goes here.
 

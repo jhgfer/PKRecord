@@ -1,32 +1,32 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Animation.h instead.
+// Make changes to CDAnimation.h instead.
 
 #import <CoreData/CoreData.h>
 
 
-extern const struct AnimationAttributes {
+extern const struct CDAnimationAttributes {
 	__unsafe_unretained NSString *aid;
 	__unsafe_unretained NSString *title;
-} AnimationAttributes;
+} CDAnimationAttributes;
 
-extern const struct AnimationRelationships {
-} AnimationRelationships;
+extern const struct CDAnimationRelationships {
+} CDAnimationRelationships;
 
-extern const struct AnimationFetchedProperties {
-} AnimationFetchedProperties;
-
-
+extern const struct CDAnimationFetchedProperties {
+} CDAnimationFetchedProperties;
 
 
 
-@interface AnimationID : NSManagedObjectID {}
+
+
+@interface CDAnimationID : NSManagedObjectID {}
 @end
 
-@interface _Animation : NSManagedObject {}
+@interface _CDAnimation : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-- (AnimationID*)objectID;
+- (CDAnimationID*)objectID;
 
 
 
@@ -59,11 +59,11 @@ extern const struct AnimationFetchedProperties {
 
 @end
 
-@interface _Animation (CoreDataGeneratedAccessors)
+@interface _CDAnimation (CoreDataGeneratedAccessors)
 
 @end
 
-@interface _Animation (CoreDataGeneratedPrimitiveAccessors)
+@interface _CDAnimation (CoreDataGeneratedPrimitiveAccessors)
 
 
 - (NSNumber*)primitiveAid;

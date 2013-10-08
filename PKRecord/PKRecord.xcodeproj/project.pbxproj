@@ -18,11 +18,11 @@
 		2FBDF6771804035C00D5868B /* NSManagedObject+PKFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF6681804035C00D5868B /* NSManagedObject+PKFinder.m */; };
 		2FBDF6781804035C00D5868B /* NSManagedObject+PKRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF66A1804035C00D5868B /* NSManagedObject+PKRecord.m */; };
 		2FBDF6791804035C00D5868B /* NSManagedObject+PKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF66C1804035C00D5868B /* NSManagedObject+PKRequest.m */; };
-		2FBDF67A1804035C00D5868B /* PKRecord+ErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF66E1804035C00D5868B /* PKRecord+ErrorHandling.m */; };
 		2FBDF67B1804035C00D5868B /* PKRecord+Threading.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF6701804035C00D5868B /* PKRecord+Threading.m */; };
 		2FBDF67C1804035C00D5868B /* PKRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF6721804035C00D5868B /* PKRecord.m */; };
 		2FBDF67D1804035C00D5868B /* PKRecordContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF6741804035C00D5868B /* PKRecordContext.m */; };
 		2FBDF67F1804039200D5868B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBDF67E1804039200D5868B /* CoreData.framework */; };
+		2FC833E818043D24000CFE94 /* PKRecord+ErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833E718043D24000CFE94 /* PKRecord+ErrorHandling.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,6 @@
 		2FBDF66A1804035C00D5868B /* NSManagedObject+PKRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PKRecord.m"; sourceTree = "<group>"; };
 		2FBDF66B1804035C00D5868B /* NSManagedObject+PKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PKRequest.h"; sourceTree = "<group>"; };
 		2FBDF66C1804035C00D5868B /* NSManagedObject+PKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PKRequest.m"; sourceTree = "<group>"; };
-		2FBDF66D1804035C00D5868B /* PKRecord+ErrorHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKRecord+ErrorHandling.h"; sourceTree = "<group>"; };
-		2FBDF66E1804035C00D5868B /* PKRecord+ErrorHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PKRecord+ErrorHandling.m"; sourceTree = "<group>"; };
 		2FBDF66F1804035C00D5868B /* PKRecord+Threading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKRecord+Threading.h"; sourceTree = "<group>"; };
 		2FBDF6701804035C00D5868B /* PKRecord+Threading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PKRecord+Threading.m"; sourceTree = "<group>"; };
 		2FBDF6711804035C00D5868B /* PKRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRecord.h; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		2FBDF6741804035C00D5868B /* PKRecordContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRecordContext.m; sourceTree = "<group>"; };
 		2FBDF6751804035C00D5868B /* PKRecordKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRecordKit.h; sourceTree = "<group>"; };
 		2FBDF67E1804039200D5868B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2FC833E618043D24000CFE94 /* PKRecord+ErrorHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKRecord+ErrorHandling.h"; sourceTree = "<group>"; };
+		2FC833E718043D24000CFE94 /* PKRecord+ErrorHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PKRecord+ErrorHandling.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				2FBDF6641804035C00D5868B /* NSManagedObject */,
-				2FBDF66D1804035C00D5868B /* PKRecord+ErrorHandling.h */,
-				2FBDF66E1804035C00D5868B /* PKRecord+ErrorHandling.m */,
+				2FC833E618043D24000CFE94 /* PKRecord+ErrorHandling.h */,
+				2FC833E718043D24000CFE94 /* PKRecord+ErrorHandling.m */,
 				2FBDF66F1804035C00D5868B /* PKRecord+Threading.h */,
 				2FBDF6701804035C00D5868B /* PKRecord+Threading.m */,
 				2FBDF6711804035C00D5868B /* PKRecord.h */,
@@ -286,7 +286,7 @@
 				2FBDF6791804035C00D5868B /* NSManagedObject+PKRequest.m in Sources */,
 				2FBDF6781804035C00D5868B /* NSManagedObject+PKRecord.m in Sources */,
 				2FBDF67C1804035C00D5868B /* PKRecord.m in Sources */,
-				2FBDF67A1804035C00D5868B /* PKRecord+ErrorHandling.m in Sources */,
+				2FC833E818043D24000CFE94 /* PKRecord+ErrorHandling.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,40 +1,40 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Animation.m instead.
+// Make changes to CDAnimation.m instead.
 
-#import "_Animation.h"
+#import "_CDAnimation.h"
 
-const struct AnimationAttributes AnimationAttributes = {
+const struct CDAnimationAttributes CDAnimationAttributes = {
 	.aid = @"aid",
 	.title = @"title",
 };
 
-const struct AnimationRelationships AnimationRelationships = {
+const struct CDAnimationRelationships CDAnimationRelationships = {
 };
 
-const struct AnimationFetchedProperties AnimationFetchedProperties = {
+const struct CDAnimationFetchedProperties CDAnimationFetchedProperties = {
 };
 
-@implementation AnimationID
+@implementation CDAnimationID
 @end
 
-@implementation _Animation
+@implementation _CDAnimation
 
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription insertNewObjectForEntityForName:@"Animation" inManagedObjectContext:moc_];
+	return [NSEntityDescription insertNewObjectForEntityForName:@"CDAnimation" inManagedObjectContext:moc_];
 }
 
 + (NSString*)entityName {
-	return @"Animation";
+	return @"CDAnimation";
 }
 
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription entityForName:@"Animation" inManagedObjectContext:moc_];
+	return [NSEntityDescription entityForName:@"CDAnimation" inManagedObjectContext:moc_];
 }
 
-- (AnimationID*)objectID {
-	return (AnimationID*)[super objectID];
+- (CDAnimationID*)objectID {
+	return (CDAnimationID*)[super objectID];
 }
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {

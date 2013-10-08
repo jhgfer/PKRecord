@@ -1,40 +1,40 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Game.m instead.
+// Make changes to CDGame.m instead.
 
-#import "_Game.h"
+#import "_CDGame.h"
 
-const struct GameAttributes GameAttributes = {
+const struct CDGameAttributes CDGameAttributes = {
 	.gid = @"gid",
 	.title = @"title",
 };
 
-const struct GameRelationships GameRelationships = {
+const struct CDGameRelationships CDGameRelationships = {
 };
 
-const struct GameFetchedProperties GameFetchedProperties = {
+const struct CDGameFetchedProperties CDGameFetchedProperties = {
 };
 
-@implementation GameID
+@implementation CDGameID
 @end
 
-@implementation _Game
+@implementation _CDGame
 
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:moc_];
+	return [NSEntityDescription insertNewObjectForEntityForName:@"CDGame" inManagedObjectContext:moc_];
 }
 
 + (NSString*)entityName {
-	return @"Game";
+	return @"CDGame";
 }
 
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription entityForName:@"Game" inManagedObjectContext:moc_];
+	return [NSEntityDescription entityForName:@"CDGame" inManagedObjectContext:moc_];
 }
 
-- (GameID*)objectID {
-	return (GameID*)[super objectID];
+- (CDGameID*)objectID {
+	return (CDGameID*)[super objectID];
 }
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {

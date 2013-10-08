@@ -1,32 +1,32 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Comics.h instead.
+// Make changes to CDComics.h instead.
 
 #import <CoreData/CoreData.h>
 
 
-extern const struct ComicsAttributes {
+extern const struct CDComicsAttributes {
 	__unsafe_unretained NSString *cid;
 	__unsafe_unretained NSString *title;
-} ComicsAttributes;
+} CDComicsAttributes;
 
-extern const struct ComicsRelationships {
-} ComicsRelationships;
+extern const struct CDComicsRelationships {
+} CDComicsRelationships;
 
-extern const struct ComicsFetchedProperties {
-} ComicsFetchedProperties;
-
-
+extern const struct CDComicsFetchedProperties {
+} CDComicsFetchedProperties;
 
 
 
-@interface ComicsID : NSManagedObjectID {}
+
+
+@interface CDComicsID : NSManagedObjectID {}
 @end
 
-@interface _Comics : NSManagedObject {}
+@interface _CDComics : NSManagedObject {}
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_;
 + (NSString*)entityName;
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
-- (ComicsID*)objectID;
+- (CDComicsID*)objectID;
 
 
 
@@ -59,11 +59,11 @@ extern const struct ComicsFetchedProperties {
 
 @end
 
-@interface _Comics (CoreDataGeneratedAccessors)
+@interface _CDComics (CoreDataGeneratedAccessors)
 
 @end
 
-@interface _Comics (CoreDataGeneratedPrimitiveAccessors)
+@interface _CDComics (CoreDataGeneratedPrimitiveAccessors)
 
 
 - (NSNumber*)primitiveCid;

@@ -1,40 +1,40 @@
 // DO NOT EDIT. This file is machine-generated and constantly overwritten.
-// Make changes to Comics.m instead.
+// Make changes to CDComics.m instead.
 
-#import "_Comics.h"
+#import "_CDComics.h"
 
-const struct ComicsAttributes ComicsAttributes = {
+const struct CDComicsAttributes CDComicsAttributes = {
 	.cid = @"cid",
 	.title = @"title",
 };
 
-const struct ComicsRelationships ComicsRelationships = {
+const struct CDComicsRelationships CDComicsRelationships = {
 };
 
-const struct ComicsFetchedProperties ComicsFetchedProperties = {
+const struct CDComicsFetchedProperties CDComicsFetchedProperties = {
 };
 
-@implementation ComicsID
+@implementation CDComicsID
 @end
 
-@implementation _Comics
+@implementation _CDComics
 
 + (id)insertInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription insertNewObjectForEntityForName:@"Comics" inManagedObjectContext:moc_];
+	return [NSEntityDescription insertNewObjectForEntityForName:@"CDComics" inManagedObjectContext:moc_];
 }
 
 + (NSString*)entityName {
-	return @"Comics";
+	return @"CDComics";
 }
 
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_ {
 	NSParameterAssert(moc_);
-	return [NSEntityDescription entityForName:@"Comics" inManagedObjectContext:moc_];
+	return [NSEntityDescription entityForName:@"CDComics" inManagedObjectContext:moc_];
 }
 
-- (ComicsID*)objectID {
-	return (ComicsID*)[super objectID];
+- (CDComicsID*)objectID {
+	return (CDComicsID*)[super objectID];
 }
 
 + (NSSet*)keyPathsForValuesAffectingValueForKey:(NSString*)key {

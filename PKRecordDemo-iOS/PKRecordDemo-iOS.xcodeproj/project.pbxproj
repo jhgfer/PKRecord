@@ -22,14 +22,22 @@
 		2FBDF6F2180404E800D5868B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBDF6D1180404E800D5868B /* UIKit.framework */; };
 		2FBDF6FA180404E800D5868B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2FBDF6F8180404E800D5868B /* InfoPlist.strings */; };
 		2FBDF6FC180404E800D5868B /* PKRecordDemo_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF6FB180404E800D5868B /* PKRecordDemo_iOSTests.m */; };
-		2FBDF71F18040A7F00D5868B /* libPKRecord.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBDF7151804056C00D5868B /* libPKRecord.a */; };
 		2FBDF72A18040F1A00D5868B /* TestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF72718040F1A00D5868B /* TestDataModel.xcdatamodeld */; };
-		2FC833B31804360C000CFE94 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833A71804360C000CFE94 /* Animation.m */; };
-		2FC833B41804360C000CFE94 /* Comics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833A91804360C000CFE94 /* Comics.m */; };
-		2FC833B51804360C000CFE94 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833AB1804360C000CFE94 /* Game.m */; };
-		2FC833B61804360C000CFE94 /* _Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833AE1804360C000CFE94 /* _Animation.m */; };
-		2FC833B71804360C000CFE94 /* _Comics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833B01804360C000CFE94 /* _Comics.m */; };
-		2FC833B81804360C000CFE94 /* _Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833B21804360C000CFE94 /* _Game.m */; };
+		2FC833BA1804383C000CFE94 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBDF73818041B4700D5868B /* CoreData.framework */; };
+		2FC833DD1804388E000CFE94 /* CDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833D11804388E000CFE94 /* CDAnimation.m */; };
+		2FC833DE1804388E000CFE94 /* CDComics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833D31804388E000CFE94 /* CDComics.m */; };
+		2FC833DF1804388E000CFE94 /* CDGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833D51804388E000CFE94 /* CDGame.m */; };
+		2FC833E01804388E000CFE94 /* _CDAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833D81804388E000CFE94 /* _CDAnimation.m */; };
+		2FC833E11804388E000CFE94 /* _CDComics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833DA1804388E000CFE94 /* _CDComics.m */; };
+		2FC833E21804388E000CFE94 /* _CDGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833DC1804388E000CFE94 /* _CDGame.m */; };
+		2FC833FE18043DD4000CFE94 /* NSManagedObject+PKAggregation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833EE18043DD4000CFE94 /* NSManagedObject+PKAggregation.m */; };
+		2FC833FF18043DD4000CFE94 /* NSManagedObject+PKFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833F018043DD4000CFE94 /* NSManagedObject+PKFinder.m */; };
+		2FC8340018043DD4000CFE94 /* NSManagedObject+PKRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833F218043DD4000CFE94 /* NSManagedObject+PKRecord.m */; };
+		2FC8340118043DD4000CFE94 /* NSManagedObject+PKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833F418043DD4000CFE94 /* NSManagedObject+PKRequest.m */; };
+		2FC8340218043DD4000CFE94 /* PKRecord+ErrorHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833F618043DD4000CFE94 /* PKRecord+ErrorHandling.m */; };
+		2FC8340318043DD4000CFE94 /* PKRecord+Threading.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833F818043DD4000CFE94 /* PKRecord+Threading.m */; };
+		2FC8340418043DD4000CFE94 /* PKRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833FA18043DD4000CFE94 /* PKRecord.m */; };
+		2FC8340518043DD4000CFE94 /* PKRecordContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833FC18043DD4000CFE94 /* PKRecordContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,27 +47,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2FBDF6C9180404E800D5868B;
 			remoteInfo = "PKRecordDemo-iOS";
-		};
-		2FBDF7141804056C00D5868B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FBDF70F1804056C00D5868B /* PKRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FBDF63A180402F300D5868B;
-			remoteInfo = PKRecord;
-		};
-		2FBDF7161804056C00D5868B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FBDF70F1804056C00D5868B /* PKRecord.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 2FBDF64A180402F300D5868B;
-			remoteInfo = PKRecordTests;
-		};
-		2FBDF7181804057D00D5868B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2FBDF70F1804056C00D5868B /* PKRecord.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 2FBDF639180402F200D5868B;
-			remoteInfo = PKRecord;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -84,22 +71,39 @@
 		2FBDF6F7180404E800D5868B /* PKRecordDemo-iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PKRecordDemo-iOSTests-Info.plist"; sourceTree = "<group>"; };
 		2FBDF6F9180404E800D5868B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2FBDF6FB180404E800D5868B /* PKRecordDemo_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PKRecordDemo_iOSTests.m; sourceTree = "<group>"; };
-		2FBDF70F1804056C00D5868B /* PKRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PKRecord.xcodeproj; path = ../../PKRecord/PKRecord.xcodeproj; sourceTree = "<group>"; };
 		2FBDF72818040F1A00D5868B /* TestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2FBDF72918040F1A00D5868B /* TestDataModel1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestDataModel1.0.xcdatamodel; sourceTree = "<group>"; };
 		2FBDF73818041B4700D5868B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		2FC833A61804360C000CFE94 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
-		2FC833A71804360C000CFE94 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
-		2FC833A81804360C000CFE94 /* Comics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comics.h; sourceTree = "<group>"; };
-		2FC833A91804360C000CFE94 /* Comics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comics.m; sourceTree = "<group>"; };
-		2FC833AA1804360C000CFE94 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		2FC833AB1804360C000CFE94 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
-		2FC833AD1804360C000CFE94 /* _Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Animation.h; sourceTree = "<group>"; };
-		2FC833AE1804360C000CFE94 /* _Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Animation.m; sourceTree = "<group>"; };
-		2FC833AF1804360C000CFE94 /* _Comics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Comics.h; sourceTree = "<group>"; };
-		2FC833B01804360C000CFE94 /* _Comics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Comics.m; sourceTree = "<group>"; };
-		2FC833B11804360C000CFE94 /* _Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Game.h; sourceTree = "<group>"; };
-		2FC833B21804360C000CFE94 /* _Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Game.m; sourceTree = "<group>"; };
+		2FC833D01804388E000CFE94 /* CDAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAnimation.h; sourceTree = "<group>"; };
+		2FC833D11804388E000CFE94 /* CDAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAnimation.m; sourceTree = "<group>"; };
+		2FC833D21804388E000CFE94 /* CDComics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDComics.h; sourceTree = "<group>"; };
+		2FC833D31804388E000CFE94 /* CDComics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDComics.m; sourceTree = "<group>"; };
+		2FC833D41804388E000CFE94 /* CDGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDGame.h; sourceTree = "<group>"; };
+		2FC833D51804388E000CFE94 /* CDGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDGame.m; sourceTree = "<group>"; };
+		2FC833D71804388E000CFE94 /* _CDAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDAnimation.h; sourceTree = "<group>"; };
+		2FC833D81804388E000CFE94 /* _CDAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDAnimation.m; sourceTree = "<group>"; };
+		2FC833D91804388E000CFE94 /* _CDComics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDComics.h; sourceTree = "<group>"; };
+		2FC833DA1804388E000CFE94 /* _CDComics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDComics.m; sourceTree = "<group>"; };
+		2FC833DB1804388E000CFE94 /* _CDGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CDGame.h; sourceTree = "<group>"; };
+		2FC833DC1804388E000CFE94 /* _CDGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CDGame.m; sourceTree = "<group>"; };
+		2FC833EA18043DD4000CFE94 /* PKRecord-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKRecord-Prefix.pch"; sourceTree = "<group>"; };
+		2FC833ED18043DD4000CFE94 /* NSManagedObject+PKAggregation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PKAggregation.h"; sourceTree = "<group>"; };
+		2FC833EE18043DD4000CFE94 /* NSManagedObject+PKAggregation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PKAggregation.m"; sourceTree = "<group>"; };
+		2FC833EF18043DD4000CFE94 /* NSManagedObject+PKFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PKFinder.h"; sourceTree = "<group>"; };
+		2FC833F018043DD4000CFE94 /* NSManagedObject+PKFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PKFinder.m"; sourceTree = "<group>"; };
+		2FC833F118043DD4000CFE94 /* NSManagedObject+PKRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PKRecord.h"; sourceTree = "<group>"; };
+		2FC833F218043DD4000CFE94 /* NSManagedObject+PKRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PKRecord.m"; sourceTree = "<group>"; };
+		2FC833F318043DD4000CFE94 /* NSManagedObject+PKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+PKRequest.h"; sourceTree = "<group>"; };
+		2FC833F418043DD4000CFE94 /* NSManagedObject+PKRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+PKRequest.m"; sourceTree = "<group>"; };
+		2FC833F518043DD4000CFE94 /* PKRecord+ErrorHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKRecord+ErrorHandling.h"; sourceTree = "<group>"; };
+		2FC833F618043DD4000CFE94 /* PKRecord+ErrorHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PKRecord+ErrorHandling.m"; sourceTree = "<group>"; };
+		2FC833F718043DD4000CFE94 /* PKRecord+Threading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PKRecord+Threading.h"; sourceTree = "<group>"; };
+		2FC833F818043DD4000CFE94 /* PKRecord+Threading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PKRecord+Threading.m"; sourceTree = "<group>"; };
+		2FC833F918043DD4000CFE94 /* PKRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRecord.h; sourceTree = "<group>"; };
+		2FC833FA18043DD4000CFE94 /* PKRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRecord.m; sourceTree = "<group>"; };
+		2FC833FB18043DD4000CFE94 /* PKRecordContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRecordContext.h; sourceTree = "<group>"; };
+		2FC833FC18043DD4000CFE94 /* PKRecordContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKRecordContext.m; sourceTree = "<group>"; };
+		2FC833FD18043DD4000CFE94 /* PKRecordKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKRecordKit.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FBDF71F18040A7F00D5868B /* libPKRecord.a in Frameworks */,
+				2FC833BA1804383C000CFE94 /* CoreData.framework in Frameworks */,
 				2FBDF6D0180404E800D5868B /* CoreGraphics.framework in Frameworks */,
 				2FBDF6D2180404E800D5868B /* UIKit.framework in Frameworks */,
 				2FBDF6CE180404E800D5868B /* Foundation.framework in Frameworks */,
@@ -132,7 +136,6 @@
 			children = (
 				2FBDF6D3180404E800D5868B /* PKRecordDemo-iOS */,
 				2FBDF6F5180404E800D5868B /* PKRecordDemo-iOSTests */,
-				2FBDF70E1804053B00D5868B /* Dependencies */,
 				2FBDF6CC180404E800D5868B /* Frameworks */,
 				2FBDF6CB180404E800D5868B /* Products */,
 			);
@@ -162,6 +165,7 @@
 		2FBDF6D3180404E800D5868B /* PKRecordDemo-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				2FC833E918043DD4000CFE94 /* PKRecord */,
 				2FBDF72618040F1A00D5868B /* DataModel */,
 				2FBDF6DC180404E800D5868B /* PKAppDelegate.h */,
 				2FBDF6DD180404E800D5868B /* PKAppDelegate.m */,
@@ -204,58 +208,82 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2FBDF70E1804053B00D5868B /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				2FBDF70F1804056C00D5868B /* PKRecord.xcodeproj */,
-			);
-			name = Dependencies;
-			path = "PKRecordDemo-iOSTests";
-			sourceTree = "<group>";
-		};
-		2FBDF7101804056C00D5868B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2FBDF7151804056C00D5868B /* libPKRecord.a */,
-				2FBDF7171804056C00D5868B /* PKRecordTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		2FBDF72618040F1A00D5868B /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				2FC833CF1804388E000CFE94 /* Entities */,
+				2FC833D61804388E000CFE94 /* Generated */,
 				2FBDF72718040F1A00D5868B /* TestDataModel.xcdatamodeld */,
-				2FC833A51804360C000CFE94 /* Entities */,
-				2FC833AC1804360C000CFE94 /* Generated */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
 		};
-		2FC833A51804360C000CFE94 /* Entities */ = {
+		2FC833CF1804388E000CFE94 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				2FC833A61804360C000CFE94 /* Animation.h */,
-				2FC833A71804360C000CFE94 /* Animation.m */,
-				2FC833A81804360C000CFE94 /* Comics.h */,
-				2FC833A91804360C000CFE94 /* Comics.m */,
-				2FC833AA1804360C000CFE94 /* Game.h */,
-				2FC833AB1804360C000CFE94 /* Game.m */,
+				2FC833D01804388E000CFE94 /* CDAnimation.h */,
+				2FC833D11804388E000CFE94 /* CDAnimation.m */,
+				2FC833D21804388E000CFE94 /* CDComics.h */,
+				2FC833D31804388E000CFE94 /* CDComics.m */,
+				2FC833D41804388E000CFE94 /* CDGame.h */,
+				2FC833D51804388E000CFE94 /* CDGame.m */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		2FC833AC1804360C000CFE94 /* Generated */ = {
+		2FC833D61804388E000CFE94 /* Generated */ = {
 			isa = PBXGroup;
 			children = (
-				2FC833AD1804360C000CFE94 /* _Animation.h */,
-				2FC833AE1804360C000CFE94 /* _Animation.m */,
-				2FC833AF1804360C000CFE94 /* _Comics.h */,
-				2FC833B01804360C000CFE94 /* _Comics.m */,
-				2FC833B11804360C000CFE94 /* _Game.h */,
-				2FC833B21804360C000CFE94 /* _Game.m */,
+				2FC833D71804388E000CFE94 /* _CDAnimation.h */,
+				2FC833D81804388E000CFE94 /* _CDAnimation.m */,
+				2FC833D91804388E000CFE94 /* _CDComics.h */,
+				2FC833DA1804388E000CFE94 /* _CDComics.m */,
+				2FC833DB1804388E000CFE94 /* _CDGame.h */,
+				2FC833DC1804388E000CFE94 /* _CDGame.m */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		2FC833E918043DD4000CFE94 /* PKRecord */ = {
+			isa = PBXGroup;
+			children = (
+				2FC833EA18043DD4000CFE94 /* PKRecord-Prefix.pch */,
+				2FC833EB18043DD4000CFE94 /* Source */,
+			);
+			name = PKRecord;
+			path = ../../PKRecord/PKRecord;
+			sourceTree = "<group>";
+		};
+		2FC833EB18043DD4000CFE94 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2FC833EC18043DD4000CFE94 /* NSManagedObject */,
+				2FC833F518043DD4000CFE94 /* PKRecord+ErrorHandling.h */,
+				2FC833F618043DD4000CFE94 /* PKRecord+ErrorHandling.m */,
+				2FC833F718043DD4000CFE94 /* PKRecord+Threading.h */,
+				2FC833F818043DD4000CFE94 /* PKRecord+Threading.m */,
+				2FC833F918043DD4000CFE94 /* PKRecord.h */,
+				2FC833FA18043DD4000CFE94 /* PKRecord.m */,
+				2FC833FB18043DD4000CFE94 /* PKRecordContext.h */,
+				2FC833FC18043DD4000CFE94 /* PKRecordContext.m */,
+				2FC833FD18043DD4000CFE94 /* PKRecordKit.h */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		2FC833EC18043DD4000CFE94 /* NSManagedObject */ = {
+			isa = PBXGroup;
+			children = (
+				2FC833ED18043DD4000CFE94 /* NSManagedObject+PKAggregation.h */,
+				2FC833EE18043DD4000CFE94 /* NSManagedObject+PKAggregation.m */,
+				2FC833EF18043DD4000CFE94 /* NSManagedObject+PKFinder.h */,
+				2FC833F018043DD4000CFE94 /* NSManagedObject+PKFinder.m */,
+				2FC833F118043DD4000CFE94 /* NSManagedObject+PKRecord.h */,
+				2FC833F218043DD4000CFE94 /* NSManagedObject+PKRecord.m */,
+				2FC833F318043DD4000CFE94 /* NSManagedObject+PKRequest.h */,
+				2FC833F418043DD4000CFE94 /* NSManagedObject+PKRequest.m */,
+			);
+			path = NSManagedObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,7 +301,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				2FBDF7191804057D00D5868B /* PBXTargetDependency */,
 			);
 			name = "PKRecordDemo-iOS";
 			productName = "PKRecordDemo-iOS";
@@ -324,12 +351,6 @@
 			mainGroup = 2FBDF6C1180404E800D5868B;
 			productRefGroup = 2FBDF6CB180404E800D5868B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 2FBDF7101804056C00D5868B /* Products */;
-					ProjectRef = 2FBDF70F1804056C00D5868B /* PKRecord.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				2FBDF6C9180404E800D5868B /* PKRecordDemo-iOS */,
@@ -337,23 +358,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		2FBDF7151804056C00D5868B /* libPKRecord.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libPKRecord.a;
-			remoteRef = 2FBDF7141804056C00D5868B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		2FBDF7171804056C00D5868B /* PKRecordTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = PKRecordTests.xctest;
-			remoteRef = 2FBDF7161804056C00D5868B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		2FBDF6C8180404E800D5868B /* Resources */ = {
@@ -399,16 +403,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FC833B31804360C000CFE94 /* Animation.m in Sources */,
-				2FC833B41804360C000CFE94 /* Comics.m in Sources */,
 				2FBDF6DA180404E800D5868B /* main.m in Sources */,
+				2FC8340018043DD4000CFE94 /* NSManagedObject+PKRecord.m in Sources */,
 				2FBDF72A18040F1A00D5868B /* TestDataModel.xcdatamodeld in Sources */,
-				2FC833B71804360C000CFE94 /* _Comics.m in Sources */,
+				2FC833FF18043DD4000CFE94 /* NSManagedObject+PKFinder.m in Sources */,
+				2FC8340418043DD4000CFE94 /* PKRecord.m in Sources */,
+				2FC833E11804388E000CFE94 /* _CDComics.m in Sources */,
 				2FBDF6E7180404E800D5868B /* PKViewController.m in Sources */,
-				2FC833B51804360C000CFE94 /* Game.m in Sources */,
-				2FC833B61804360C000CFE94 /* _Animation.m in Sources */,
+				2FC8340218043DD4000CFE94 /* PKRecord+ErrorHandling.m in Sources */,
+				2FC833E21804388E000CFE94 /* _CDGame.m in Sources */,
+				2FC833DD1804388E000CFE94 /* CDAnimation.m in Sources */,
+				2FC833DE1804388E000CFE94 /* CDComics.m in Sources */,
 				2FBDF6DE180404E800D5868B /* PKAppDelegate.m in Sources */,
-				2FC833B81804360C000CFE94 /* _Game.m in Sources */,
+				2FC8340518043DD4000CFE94 /* PKRecordContext.m in Sources */,
+				2FC833FE18043DD4000CFE94 /* NSManagedObject+PKAggregation.m in Sources */,
+				2FC833DF1804388E000CFE94 /* CDGame.m in Sources */,
+				2FC833E01804388E000CFE94 /* _CDAnimation.m in Sources */,
+				2FC8340318043DD4000CFE94 /* PKRecord+Threading.m in Sources */,
+				2FC8340118043DD4000CFE94 /* NSManagedObject+PKRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,11 +439,6 @@
 			isa = PBXTargetDependency;
 			target = 2FBDF6C9180404E800D5868B /* PKRecordDemo-iOS */;
 			targetProxy = 2FBDF6F3180404E800D5868B /* PBXContainerItemProxy */;
-		};
-		2FBDF7191804057D00D5868B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = PKRecord;
-			targetProxy = 2FBDF7181804057D00D5868B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -552,7 +559,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PKRecordDemo-iOS/PKRecordDemo-iOS-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../PKRecord/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../PKRecord/PKRecord/Source/**";
 				INFOPLIST_FILE = "PKRecordDemo-iOS/PKRecordDemo-iOS-Info.plist";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -567,7 +574,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PKRecordDemo-iOS/PKRecordDemo-iOS-Prefix.pch";
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../PKRecord/**";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../PKRecord/PKRecord/Source/**";
 				INFOPLIST_FILE = "PKRecordDemo-iOS/PKRecordDemo-iOS-Info.plist";
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";

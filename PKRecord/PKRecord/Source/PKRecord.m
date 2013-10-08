@@ -2,8 +2,8 @@
 //  PKRecord.m
 //  PKTestProj
 //
-//  Created by zhongsheng on 13-9-27.
-//  Copyright (c) 2013年 zhongsheng. All rights reserved.
+//  Created by passerbycrk on 13-9-27.
+//  Copyright (c) 2013年 passerbycrk. All rights reserved.
 //
 
 #import "PKRecord.h"
