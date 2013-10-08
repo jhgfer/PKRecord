@@ -1,4 +1,4 @@
-# ![Awesome](https://github.com/passerbycrk/PKRecord/master/logo/awesome_logo_small.png?raw=true) PKRecord
+# ![Awesome](https://github.com/passerbycrk/PKRecord/blob/master/logo/awesome_logo_small.png?raw=true) PKRecord
 ========
 
 CoreData持久化框架。
