@@ -3,6 +3,9 @@
 
 ## 配置 Core Data Stack
 
+**全部用的是对象方法,是为了能初始化多个PKRecord来连接多个DataModel,用于配置多个CoreDataStack.	**
+
+
 开始前，在你的工程中先引入头文件*PKRecordKit.h*(比如在pch文件中引入，这样就可以整个工程都能用了)
 
 接下来，需要配置一发，啥时候开始配置就看你了，可以在applicationDidFinishLaunching:(UIApplication \*) withOptions:(NSDictionary \*) 方法, 或者 awakeFromNib等方法中使用以下方法来配置一个 **PKRecord** :
@@ -18,11 +21,10 @@
 
 	- (void)setModelName:(NSString *)name;
 
-之所以全部用的是		
-
 最后，在退出app前，你可以使用以下方法来清理掉相关上下文：
 
 	- (void)cleanup;
+	
 	
 
 ## 保存 (可参考Demo中使用)
