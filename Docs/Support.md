@@ -1,3 +1,5 @@
+##License
+
 The MIT License (MIT)
 
 Copyright (c) 2013 passerbycrk
@@ -18,3 +20,23 @@ FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+---
+
+## Support
+
+有什么问题可以直接在ISSUE中提出,我会努力维护的！
+
+同时也需要大家共同支持(你们是懂我的),谢谢。
+
+---
+## Twitter 
+
+[@路人饼](https://twitter.com/passerbycrk),我不咋上,呵呵,用来坑外国人的.
+
+---
+## SinaWeibo
+[@饼麒麟](http://weibo.com/passerbycrk/),上的比Twitter多一点,嘻嘻,用来坑国人的.
+
+---
+
