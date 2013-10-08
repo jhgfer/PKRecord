@@ -29,7 +29,7 @@ static id testValue = @"2";
     // 初始化数据
     [self testInitData];
     
-    [self testRecordSaving];
+//    [self testRecordSaving];
     
 //    [self testContextSaving];
     

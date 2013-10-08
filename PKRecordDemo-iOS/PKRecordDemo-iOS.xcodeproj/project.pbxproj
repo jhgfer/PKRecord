@@ -24,9 +24,12 @@
 		2FBDF6FC180404E800D5868B /* PKRecordDemo_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF6FB180404E800D5868B /* PKRecordDemo_iOSTests.m */; };
 		2FBDF71F18040A7F00D5868B /* libPKRecord.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FBDF7151804056C00D5868B /* libPKRecord.a */; };
 		2FBDF72A18040F1A00D5868B /* TestDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF72718040F1A00D5868B /* TestDataModel.xcdatamodeld */; };
-		2FBDF731180410B500D5868B /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF730180410B500D5868B /* Game.m */; };
-		2FBDF734180410B500D5868B /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF733180410B500D5868B /* Animation.m */; };
-		2FBDF737180410B500D5868B /* Comics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FBDF736180410B500D5868B /* Comics.m */; };
+		2FC833B31804360C000CFE94 /* Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833A71804360C000CFE94 /* Animation.m */; };
+		2FC833B41804360C000CFE94 /* Comics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833A91804360C000CFE94 /* Comics.m */; };
+		2FC833B51804360C000CFE94 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833AB1804360C000CFE94 /* Game.m */; };
+		2FC833B61804360C000CFE94 /* _Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833AE1804360C000CFE94 /* _Animation.m */; };
+		2FC833B71804360C000CFE94 /* _Comics.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833B01804360C000CFE94 /* _Comics.m */; };
+		2FC833B81804360C000CFE94 /* _Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FC833B21804360C000CFE94 /* _Game.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,13 +87,19 @@
 		2FBDF70F1804056C00D5868B /* PKRecord.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PKRecord.xcodeproj; path = ../../PKRecord/PKRecord.xcodeproj; sourceTree = "<group>"; };
 		2FBDF72818040F1A00D5868B /* TestDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestDataModel.xcdatamodel; sourceTree = "<group>"; };
 		2FBDF72918040F1A00D5868B /* TestDataModel1.0.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestDataModel1.0.xcdatamodel; sourceTree = "<group>"; };
-		2FBDF72F180410B500D5868B /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		2FBDF730180410B500D5868B /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
-		2FBDF732180410B500D5868B /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
-		2FBDF733180410B500D5868B /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
-		2FBDF735180410B500D5868B /* Comics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comics.h; sourceTree = "<group>"; };
-		2FBDF736180410B500D5868B /* Comics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comics.m; sourceTree = "<group>"; };
 		2FBDF73818041B4700D5868B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2FC833A61804360C000CFE94 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		2FC833A71804360C000CFE94 /* Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animation.m; sourceTree = "<group>"; };
+		2FC833A81804360C000CFE94 /* Comics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comics.h; sourceTree = "<group>"; };
+		2FC833A91804360C000CFE94 /* Comics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comics.m; sourceTree = "<group>"; };
+		2FC833AA1804360C000CFE94 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		2FC833AB1804360C000CFE94 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		2FC833AD1804360C000CFE94 /* _Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Animation.h; sourceTree = "<group>"; };
+		2FC833AE1804360C000CFE94 /* _Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Animation.m; sourceTree = "<group>"; };
+		2FC833AF1804360C000CFE94 /* _Comics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Comics.h; sourceTree = "<group>"; };
+		2FC833B01804360C000CFE94 /* _Comics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Comics.m; sourceTree = "<group>"; };
+		2FC833B11804360C000CFE94 /* _Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _Game.h; sourceTree = "<group>"; };
+		2FC833B21804360C000CFE94 /* _Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _Game.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,14 +226,36 @@
 			isa = PBXGroup;
 			children = (
 				2FBDF72718040F1A00D5868B /* TestDataModel.xcdatamodeld */,
-				2FBDF735180410B500D5868B /* Comics.h */,
-				2FBDF736180410B500D5868B /* Comics.m */,
-				2FBDF732180410B500D5868B /* Animation.h */,
-				2FBDF733180410B500D5868B /* Animation.m */,
-				2FBDF72F180410B500D5868B /* Game.h */,
-				2FBDF730180410B500D5868B /* Game.m */,
+				2FC833A51804360C000CFE94 /* Entities */,
+				2FC833AC1804360C000CFE94 /* Generated */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		2FC833A51804360C000CFE94 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2FC833A61804360C000CFE94 /* Animation.h */,
+				2FC833A71804360C000CFE94 /* Animation.m */,
+				2FC833A81804360C000CFE94 /* Comics.h */,
+				2FC833A91804360C000CFE94 /* Comics.m */,
+				2FC833AA1804360C000CFE94 /* Game.h */,
+				2FC833AB1804360C000CFE94 /* Game.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2FC833AC1804360C000CFE94 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				2FC833AD1804360C000CFE94 /* _Animation.h */,
+				2FC833AE1804360C000CFE94 /* _Animation.m */,
+				2FC833AF1804360C000CFE94 /* _Comics.h */,
+				2FC833B01804360C000CFE94 /* _Comics.m */,
+				2FC833B11804360C000CFE94 /* _Game.h */,
+				2FC833B21804360C000CFE94 /* _Game.m */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,13 +399,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FBDF731180410B500D5868B /* Game.m in Sources */,
+				2FC833B31804360C000CFE94 /* Animation.m in Sources */,
+				2FC833B41804360C000CFE94 /* Comics.m in Sources */,
 				2FBDF6DA180404E800D5868B /* main.m in Sources */,
-				2FBDF734180410B500D5868B /* Animation.m in Sources */,
-				2FBDF737180410B500D5868B /* Comics.m in Sources */,
 				2FBDF72A18040F1A00D5868B /* TestDataModel.xcdatamodeld in Sources */,
+				2FC833B71804360C000CFE94 /* _Comics.m in Sources */,
 				2FBDF6E7180404E800D5868B /* PKViewController.m in Sources */,
+				2FC833B51804360C000CFE94 /* Game.m in Sources */,
+				2FC833B61804360C000CFE94 /* _Animation.m in Sources */,
 				2FBDF6DE180404E800D5868B /* PKAppDelegate.m in Sources */,
+				2FC833B81804360C000CFE94 /* _Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
