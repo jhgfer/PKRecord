@@ -31,8 +31,8 @@ static id testValue = @"2";
 
     // 使用context进行持久化操作
     /*
-     * 推荐用这个，而且只需要在关键时刻进行最后的持久化,比如enterBackground,这样能使app高效的运行。
-     * 不过这么用有弊端,就是无法与FRC配合使用,因为不持久化到本地FRC就不会回调。。
+     * 推荐用这个，只需要在关键时刻进行最后的持久化,比如EnterBackgroundNotification,这样能使app高效的运行。
+     * 不过只在关键时刻Save也有弊端,就是无法与FRC配合使用,因为不持久化到本地FRC就不会回调delegate。。
      */
     [self testContextSaving];
 
@@ -61,9 +61,9 @@ static id testValue = @"2";
     NSURL *storeDirURL = [storeDoc URLByAppendingPathComponent:@"DB" isDirectory:YES];
     NSURL *storeURL=[storeDirURL URLByAppendingPathComponent:@"PKRecordDB.sqlite" isDirectory:NO];
     
-    PKRecord *record = [[PKRecord alloc] init]; // 可以创建多个来连接不同DB
-    [record setModelName:@"TestDataModel"]; // 不设置的话，自动去mainBundle查找。
-    [record setupCoreDataStackAutoMigratingInStoreURL:storeURL]; // TODO:不设置默认定制存储地址。
+    PKRecord *record = [[PKRecord alloc] init]; // 可以创建多个来配置多个CoreData Stack
+    [record setModelName:@"TestDataModel"]; // 可已不设置,会自动去mainBundle查找DataModel。
+    [record setupCoreDataStackAutoMigratingInStoreURL:storeURL]; // TODO:默认定制存储地址。
     self.record = record;
     
     // 保存context
@@ -99,7 +99,7 @@ static id testValue = @"2";
     [self.persistenceContext saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
         NSLog(@"[testContextSaving] saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime);
         CDAnimation *fetchObj = [CDAnimation findFirstByAttribute:testAttri withValue:testValue inContext:self.persistenceContext];
-        NSLog(@"[testRecordSaving] after change:{%@:%@}",fetchObj.aid,fetchObj.title);
+        NSLog(@"[testContextSaving] after change:{%@:%@}",fetchObj.aid,fetchObj.title);
         NSLog(@"[testContextSaving] end");
     }];
 }
