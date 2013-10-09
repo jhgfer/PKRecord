@@ -3,7 +3,8 @@
 
 ## 配置 Core Data Stack
 
-**全部用的是对象方法,是为了能初始化多个PKRecord来连接多个DataModel,用于配置多个CoreDataStack.	**
+
+** 全部用的是对象方法,是为了能初始化多个PKRecord来连接多个DataModel,用于配置多个CoreDataStack.	**
 
 
 开始前，在你的工程中先引入头文件*PKRecordKit.h*(比如在pch文件中引入，这样就可以整个工程都能用了)
