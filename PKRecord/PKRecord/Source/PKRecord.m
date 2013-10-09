@@ -21,21 +21,11 @@
 @implementation PKRecord
 {
     BOOL _isMemoryStore;
-    dispatch_queue_t _recordRootQueue;
 }
 
 - (void)dealloc
 {
     [self cleanup];
-}
-
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        _recordRootQueue = dispatch_queue_create([[NSString stringWithFormat:@"PKRecord-RootQueue-%@",self] UTF8String], NULL);
-    }
-    return self;
 }
 
 #pragma mark - Setup
@@ -235,15 +225,7 @@
 
 - (void)rootContextChanged:(NSNotification *)notification
 {
-    if (![NSThread isMainThread]) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self rootContextChanged:notification];
-        });
-    }else{
-        dispatch_async(_recordRootQueue, ^{
-            [self.defaultContext mergeChangesFromContextDidSaveNotification:notification];
-        });
-    }
+    [self.defaultContext mergeChangesFromContextDidSaveNotification:notification];
 }
 
 
