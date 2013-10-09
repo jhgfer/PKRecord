@@ -43,6 +43,9 @@ static id testValue = @"2";
     
     // 使用context进行多线程持久化操作
     //[self testMutiThreadSaving];
+    
+    // 使用context在lock dispatchQueue中进行持久化操作
+    [self testDispatchQueueSaving];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,7 +67,7 @@ static id testValue = @"2";
     NSURL *storeURL=[storeDirURL URLByAppendingPathComponent:@"PKRecordDB.sqlite" isDirectory:NO];
     
     PKRecord *record = [[PKRecord alloc] init]; // 可以创建多个来配置多个CoreData Stack
-    [record setModelName:@"TestDataModel"]; // 可已不设置,会自动去mainBundle查找DataModel。
+    [record setModelName:@"TestDataModel"]; // 可以不设置,会自动去mainBundle查找DataModel。
     [record setupCoreDataStackAutoMigratingInStoreURL:storeURL]; // TODO:默认定制存储地址。
     self.record = record;
     
@@ -148,12 +151,12 @@ static id testValue = @"2";
             CDAnimation *fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:threadContext2];
             if (fetchObject) {
                 [lock lock];
-                PKLog(@"(Thread 2) delete object:%@",fetchObject)
+                PKLog(@"(Thread 2) delete object:%@",fetchObject.title)
                 [fetchObject deleteInContext:threadContext2];
                 [lock unlock];
             }
             fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:threadContext2];
-            PKLog(@"(Thread 2) after delete object:%@",fetchObject)
+            PKLog(@"(Thread 2) after delete object:%@",fetchObject.title)
             
             NSTimeInterval threadStartTime2 = [[NSDate date] timeIntervalSince1970];
             [threadContext2 saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
@@ -175,6 +178,52 @@ static id testValue = @"2";
         }];
     });
 }
+
+
+- (void)testDispatchQueueSaving
+{
+    dispatch_queue_t lockQueue = dispatch_queue_create("com.pkrecord.test.queue", NULL);
+    
+    dispatch_async(lockQueue, ^{
+        PKRecordContext *threadContext1 = [self.record contextForCurrentThread];
+        [threadContext1 setWorkingName:@"THREAD-1"];
+        
+        PKLog(@"(Thread 1) will start change :%@",threadContext1)
+        NSTimeInterval threadStartTime1 = [[NSDate date] timeIntervalSince1970];
+        NSArray *fetchArray = [CDAnimation findAllInContext:threadContext1];
+        
+        dispatch_async(lockQueue, ^{
+            PKRecordContext *threadContext2 = [self.record contextForCurrentThread];
+            [threadContext2 setWorkingName:@"THREAD-2"];
+            PKLog(@"(Thread 2) will delete in:%@",threadContext2)
+            id deleteValue = @(888);
+            CDAnimation *fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:threadContext2];
+            if (fetchObject) {
+                PKLog(@"(Thread 2) delete object:%@",fetchObject.title)
+                [fetchObject deleteInContext:threadContext2];
+            }
+            fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:threadContext2];
+            PKLog(@"(Thread 2) after delete object:%@",fetchObject.title)
+            
+            NSTimeInterval threadStartTime2 = [[NSDate date] timeIntervalSince1970];
+            [threadContext2 saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+                PKLog(@"(Thread 2) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:threadContext2],success,error)
+                PKLog(@"(Thread 2) saveTime:%f",[[NSDate date] timeIntervalSince1970] - threadStartTime2)
+                
+            }];
+        });
+        
+        [fetchArray enumerateObjectsUsingBlock:^(CDAnimation *obj, NSUInteger idx, BOOL *stop) {
+            obj.title = @"PKPKPKPKPKPKPK";
+        }];
+        
+        [threadContext1 saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+            PKLog(@"(Thread 1) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:threadContext1],success,error)
+            PKLog(@"(Thread 1) saveTime:%f",[[NSDate date] timeIntervalSince1970] - threadStartTime1)
+        }];
+    });
+}
+
 
 #pragma mark - Log
 
