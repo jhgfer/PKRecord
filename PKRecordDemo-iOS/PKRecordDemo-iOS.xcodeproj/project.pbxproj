@@ -561,6 +561,7 @@
 				GCC_PREFIX_HEADER = "PKRecordDemo-iOS/PKRecordDemo-iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../PKRecord/PKRecord/Source/**";
 				INFOPLIST_FILE = "PKRecordDemo-iOS/PKRecordDemo-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -576,6 +577,7 @@
 				GCC_PREFIX_HEADER = "PKRecordDemo-iOS/PKRecordDemo-iOS-Prefix.pch";
 				HEADER_SEARCH_PATHS = "\"$(SRCROOT)\"/../PKRecord/PKRecord/Source/**";
 				INFOPLIST_FILE = "PKRecordDemo-iOS/PKRecordDemo-iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

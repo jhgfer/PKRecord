@@ -11,6 +11,8 @@
 #import "CDComics.h"
 #import "CDGame.h"
 
+#define PKLog(frmt, ...) [self loggingMessage:(frmt), ##__VA_ARGS__];
+
 @interface PKViewController ()
 @property (nonatomic, strong) PKRecord *record;
 @property (nonatomic,   weak) PKRecordContext *persistenceContext;
@@ -53,7 +55,7 @@ static id testValue = @"2";
 {
     // 设置错误回调
     [PKRecord setErrorHandlerBlock:^(NSError *error) {
-        NSLog(@"error:%@",error);
+        PKLog(@"PKRecord Error:%@",error)
     }];
     
     // 制定保存路径 ~/Library/DB/PKRecordDB.sqlite
@@ -72,7 +74,7 @@ static id testValue = @"2";
 
 - (void)testInitData
 {
-    NSLog(@"[testInitData] start");
+    PKLog(@"[testInitData] start")
     // 删除全部数据
     [CDAnimation truncateAllInContext:self.persistenceContext];
     // 创建新数据
@@ -83,47 +85,47 @@ static id testValue = @"2";
     }
     NSTimeInterval startTime = [[NSDate date] timeIntervalSince1970];
     [self.persistenceContext saveToPersistentStoreAndWait];
-    NSLog(@"[testInitData] saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime);
-    NSLog(@"[testInitData] end");
+    PKLog(@"[testInitData] saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime)
+    PKLog(@"[testInitData] end")
 }
 
 - (void)testContextSaving
 {
-    NSLog(@"[testContextSaving] start");
+    PKLog(@"[testContextSaving] start")
     CDAnimation *fetchObj = [CDAnimation findFirstByAttribute:testAttri withValue:testValue inContext:self.persistenceContext];
-    NSLog(@"[testContextSaving] before change:{%@:%@}",fetchObj.aid,fetchObj.title);
+    PKLog(@"[testContextSaving] before change:{%@:%@}",fetchObj.aid,fetchObj.title)
     if (fetchObj) {
         fetchObj.title = @"ahahahahaha";
     }
     NSTimeInterval startTime = [[NSDate date] timeIntervalSince1970];
     [self.persistenceContext saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-        NSLog(@"[testContextSaving] saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime);
+        PKLog(@"[testContextSaving] saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime)
         CDAnimation *fetchObj = [CDAnimation findFirstByAttribute:testAttri withValue:testValue inContext:self.persistenceContext];
-        NSLog(@"[testContextSaving] after change:{%@:%@}",fetchObj.aid,fetchObj.title);
-        NSLog(@"[testContextSaving] end");
+        PKLog(@"[testContextSaving] after change:{%@:%@}",fetchObj.aid,fetchObj.title)
+        PKLog(@"[testContextSaving] end")
     }];
 }
 
 - (void)testRecordSaving
 {
-    NSLog(@"[testRecordSaving] start");
+    PKLog(@"[testRecordSaving] start")
     NSTimeInterval startTime = [[NSDate date] timeIntervalSince1970];
     [self.record
      saveUsingCurrentThreadContextWithBlock:^(PKRecord *record, PKRecordContext *context)
      {
          CDAnimation *fetchObj = [CDAnimation findFirstByAttribute:testAttri withValue:testValue inContext:context];
-         NSLog(@"[testRecordSaving] before change:{%@:%@}",fetchObj.aid,fetchObj.title);
+         PKLog(@"[testRecordSaving] before change:{%@:%@}",fetchObj.aid,fetchObj.title)
          if (fetchObj) {
              fetchObj.title = @"yohohohoho";
          }
      }
      onCompleted:^(PKRecord *record, PKRecordContext *context, BOOL success, NSError *error)
      {
-         NSLog(@"[testRecordSaving] count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:context],success,error);
-         NSLog(@"[testRecordSaving] saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime);
+         PKLog(@"[testRecordSaving] count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:context],success,error)
+         PKLog(@"[testRecordSaving] saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime)
          CDAnimation *fetchObj = [CDAnimation findFirstByAttribute:testAttri withValue:testValue inContext:context];
-         NSLog(@"[testRecordSaving] after change:{%@:%@}",fetchObj.aid,fetchObj.title);
-         NSLog(@"[testRecordSaving] end");
+         PKLog(@"[testRecordSaving] after change:{%@:%@}",fetchObj.aid,fetchObj.title)
+         PKLog(@"[testRecordSaving] end")
      }];
 }
 
@@ -134,29 +136,29 @@ static id testValue = @"2";
         PKRecordContext *threadContext1 = [self.record contextForCurrentThread];
         [threadContext1 setWorkingName:@"THREAD-1"];
         
-        NSLog(@"(Thread 1) will start change :%@",threadContext1);
+        PKLog(@"(Thread 1) will start change :%@",threadContext1)
         NSTimeInterval threadStartTime1 = [[NSDate date] timeIntervalSince1970];
         NSArray *fetchArray = [CDAnimation findAllInContext:threadContext1];
 
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             PKRecordContext *threadContext2 = [self.record contextForCurrentThread];
             [threadContext2 setWorkingName:@"THREAD-2"];
-            NSLog(@"(Thread 2) will delete in:%@",threadContext2);
+            PKLog(@"(Thread 2) will delete in:%@",threadContext2)
             id deleteValue = @(88);
             CDAnimation *fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:threadContext2];
             if (fetchObject) {
                 [lock lock];
-                NSLog(@"(Thread 2) delete object:%@",fetchObject);
+                PKLog(@"(Thread 2) delete object:%@",fetchObject)
                 [fetchObject deleteInContext:threadContext2];
                 [lock unlock];
             }
             fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:threadContext2];
-            NSLog(@"(Thread 2) after delete object:%@",fetchObject);
+            PKLog(@"(Thread 2) after delete object:%@",fetchObject)
             
             NSTimeInterval threadStartTime2 = [[NSDate date] timeIntervalSince1970];
             [threadContext2 saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-                NSLog(@"(Thread 2) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:threadContext2],success,error);
-                NSLog(@"(Thread 2) saveTime:%f",[[NSDate date] timeIntervalSince1970] - threadStartTime2);
+                PKLog(@"(Thread 2) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:threadContext2],success,error)
+                PKLog(@"(Thread 2) saveTime:%f",[[NSDate date] timeIntervalSince1970] - threadStartTime2)
                 
             }];
         });
@@ -168,11 +170,32 @@ static id testValue = @"2";
         [lock unlock];
         
         [threadContext1 saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-            NSLog(@"(Thread 1) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:threadContext1],success,error);
-            NSLog(@"(Thread 1) saveTime:%f",[[NSDate date] timeIntervalSince1970] - threadStartTime1);
-            
+            PKLog(@"(Thread 1) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:threadContext1],success,error)
+            PKLog(@"(Thread 1) saveTime:%f",[[NSDate date] timeIntervalSince1970] - threadStartTime1)
         }];
     });
+}
+
+#pragma mark - Log
+
+- (void)loggingMessage:(NSString *)message,...
+{
+    va_list args;
+	if (message)
+	{
+		va_start(args, message);
+		
+		NSString *logMsg = [[NSString alloc] initWithFormat:message arguments:args];
+        
+        NSLog(@"%@",logMsg);
+        
+		dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *text = [self.textView.text stringByAppendingFormat:@"\n\n%@",logMsg];
+            self.textView.text = text;
+        });
+        
+		va_end(args);
+	}
 }
 
 @end

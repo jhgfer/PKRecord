@@ -10,4 +10,6 @@
 
 @interface PKViewController : UIViewController
 
+@property (nonatomic, strong) IBOutlet UITextView *textView;
+
 @end
