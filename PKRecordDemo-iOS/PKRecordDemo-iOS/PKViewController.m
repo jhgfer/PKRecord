@@ -45,7 +45,7 @@ static id testValue = @"2";
     //[self testMutiThreadSaving];
     
     // 使用context在lock dispatchQueue中进行持久化操作
-    [self testDispatchQueueSaving];
+    //[self testDispatchQueueSaving];
 }
 
 - (void)didReceiveMemoryWarning
@@ -182,34 +182,31 @@ static id testValue = @"2";
 
 - (void)testDispatchQueueSaving
 {
-    dispatch_queue_t lockQueue = dispatch_queue_create("com.pkrecord.test.queue", NULL);
+    dispatch_queue_t lockQueue = dispatch_queue_create("com.PKRecord.test.queue", NULL);
     
     dispatch_async(lockQueue, ^{
-        PKRecordContext *threadContext1 = [self.record contextForCurrentThread];
-        [threadContext1 setWorkingName:@"THREAD-1"];
         
-        PKLog(@"(Thread 1) will start change :%@",threadContext1)
-        NSTimeInterval threadStartTime1 = [[NSDate date] timeIntervalSince1970];
-        NSArray *fetchArray = [CDAnimation findAllInContext:threadContext1];
+        PKRecordContext *context = [self.record contextForCurrentThread];
+        
+        PKLog(@"[0](action 1) will start change :%@",context)
+        NSTimeInterval startTime1 = [[NSDate date] timeIntervalSince1970];
+        NSArray *fetchArray = [CDAnimation findAllInContext:context];
         
         dispatch_async(lockQueue, ^{
-            PKRecordContext *threadContext2 = [self.record contextForCurrentThread];
-            [threadContext2 setWorkingName:@"THREAD-2"];
-            PKLog(@"(Thread 2) will delete in:%@",threadContext2)
+            PKLog(@"[3](action 2) will delete in:%@",context)
             id deleteValue = @(888);
-            CDAnimation *fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:threadContext2];
+            CDAnimation *fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:context];
             if (fetchObject) {
-                PKLog(@"(Thread 2) delete object:%@",fetchObject.title)
-                [fetchObject deleteInContext:threadContext2];
+                PKLog(@"[4](action 2) delete object:%@",fetchObject.title)
+                [fetchObject deleteInContext:context];
             }
-            fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:threadContext2];
-            PKLog(@"(Thread 2) after delete object:%@",fetchObject.title)
+            fetchObject = [CDAnimation findFirstByAttribute:testAttri withValue:deleteValue inContext:context];
+            PKLog(@"[5](action 2) after delete object:%@",fetchObject.title)
             
-            NSTimeInterval threadStartTime2 = [[NSDate date] timeIntervalSince1970];
-            [threadContext2 saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-                PKLog(@"(Thread 2) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:threadContext2],success,error)
-                PKLog(@"(Thread 2) saveTime:%f",[[NSDate date] timeIntervalSince1970] - threadStartTime2)
-                
+            NSTimeInterval startTime2 = [[NSDate date] timeIntervalSince1970];
+            [context saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
+                PKLog(@"[6](action 2) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:context],success,error)
+                PKLog(@"[7](action 2) saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime2)
             }];
         });
         
@@ -217,10 +214,9 @@ static id testValue = @"2";
             obj.title = @"PKPKPKPKPKPKPK";
         }];
         
-        [threadContext1 saveToPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
-            PKLog(@"(Thread 1) count:%d success:%d error:%@",[CDAnimation countOfEntitiesWithContext:threadContext1],success,error)
-            PKLog(@"(Thread 1) saveTime:%f",[[NSDate date] timeIntervalSince1970] - threadStartTime1)
-        }];
+        PKLog(@"[1](action 1) will save ")
+        [context saveToPersistentStoreAndWait];
+        PKLog(@"[2](action 1) saveTime:%f",[[NSDate date] timeIntervalSince1970] - startTime1)
     });
 }
 
